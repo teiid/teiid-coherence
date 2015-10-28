@@ -1,0 +1,20 @@
+ #  copy and paste the following into the <resource-adapters> section of the server configuration
+ #  replacing your values for the properties to configure the cache
+ 
+                <resource-adapter id="coherenceDS">
+                    <module slot="main" id="org.jboss.teiid.resource-adapter.coherence"/>
+                    <transaction-support>NoTransaction</transaction-support>
+                    <connection-definitions>
+                        <connection-definition class-name="org.teiid.resource.adapter.coherence.CoherenceManagedConnectionFactory" jndi-name="java:/coherenceDS" enabled="true" use-java-context="true" pool-name="coherenceDS">
+                            <config-property name="CacheName">
+                                your-cache-name
+                            </config-property>
+                            <config-property name="CacheClassName">
+                                org.you.class.name
+                            </config-property>
+                            <config-property name="PrimaryKeyFieldName">
+                                primaryKeyFieldName
+                            </config-property>
+                        </connection-definition>
+                    </connection-definitions>
+                </resource-adapter> 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.0" name="org.jboss.teiid.translator.coherence.cache">
+    <resources>
+        <resource-root path="."/>
+        <resource-root path="coherence-${version.coherence}.jar" />
+        <resource-root path="pojo-${version.pojo}.jar" />
+    </resources>
+
+    <dependencies>
+        <module name="javax.api" export="true"/>
+        <module name="sun.jdk" export="true"/>
+        <module name="javaee.api" export="true"/>
+        <module name="javax.resource.api"/>
+
+ 		<module name="org.apache.log4j"  export="true"/>
+
+        <module name="org.jboss.jts" />
+        <module name="javax.transaction.api" export="true" />
+		<module name="org.jboss.modules" export="true" />
+		
+      <system export="true">
+        <paths>
+          <path name="sun/rmi/server"/>           
+        </paths>
+      </system>		
+       
+    </dependencies>
+</module>

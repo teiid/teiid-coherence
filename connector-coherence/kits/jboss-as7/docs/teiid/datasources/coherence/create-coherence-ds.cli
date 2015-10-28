@@ -1,0 +1,9 @@
+
+/subsystem=resource-adapters/resource-adapter=coherence:add(module=org.jboss.teiid.resource-adapter.coherence)
+/subsystem=resource-adapters/resource-adapter=coherence/connection-definitions=coherenceDS:add(jndi-name="java:/coherenceDS", class-name=org.teiid.resource.adapter.coherence.CoherenceManagedConnectionFactory, enabled="true", use-java-context="true")
+/subsystem=resource-adapters/resource-adapter=coherence/connection-definitions=coherenceDS/config-properties=CacheName:add(value="class.name")
+/subsystem=resource-adapters/resource-adapter=coherence/connection-definitions=coherenceDS/config-properties=CacheClassName:add(value="cache.class.name")
+/subsystem=resource-adapters/resource-adapter=coherence/connection-definitions=coherenceDS/config-properties=PrimaryKeyFieldName:add(value="key.name")
+#/subsystem=resource-adapters/resource-adapter=coherence/connection-definitions=coherenceDS/config-properties=PrimaryKeyFieldClassName:add(value="${key.field.class.name}")
+/subsystem=resource-adapters/resource-adapter=coherence:activate
+
