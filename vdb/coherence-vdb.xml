@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<vdb name="Cache" version="1">
+
+    <description>Example of dynamic VDB to access a Coherence Cache</description>
+    
+    <property name="UseConnectorMetadata" value="cached" />
+    
+    <model name="CoherenceCacheModel" type="Physical">
+        <property name="importer.useFullSchemaName" value="false"/>
+           
+       <source name="coherenceCache" translator-name="coherence" connection-jndi-name="java:/coherenceDS" />  
+       
+    </model>        
+ </vdb>

@@ -1,0 +1,29 @@
+<module xmlns="urn:jboss:module:1.1" name="org.jboss.teiid.resource-adapter.coherence">
+   
+    <resources>
+        <resource-root path="connector-coherence-${project.version}.jar"/>
+        <resource-root path="."/>
+        <!-- Insert resources here -->
+    </resources>
+
+    <dependencies>
+        <module name="javax.api"/>
+        <module name="javax.resource.api"/>
+        <module name="org.jboss.teiid.common-core"/>
+        <module name="org.jboss.teiid.api"/>
+        <module name="org.jboss.teiid"  />
+		<!--module name="org.jboss.teiid.admin"/>
+		<module name="org.jboss.teiid.client"/-->
+		<module name="sun.jdk" export="true" /> 
+
+		<module name="org.jboss.modules" export="true" />
+        <module name="org.jboss.teiid.translator.coherence" />
+        <module name="org.jboss.teiid.translator.object"   />   
+        <module name="org.jboss.teiid.translator.coherence.cache" optional="true" services="import" export="true" />                
+
+                
+        <module name="org.jboss.jts" export="true" />
+        <module name="javax.transaction.api" export="true" />
+
+    </dependencies>
+</module>
